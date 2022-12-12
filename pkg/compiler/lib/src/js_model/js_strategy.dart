@@ -441,7 +441,7 @@ class JsBackendStrategy implements interfaces.JsBackendStrategy {
   /// the serialized data.
   ///
   /// The needed members include members computed on demand during non-modular
-  /// code generation, such as constructor bodies and and generator bodies.
+  /// code generation, such as constructor bodies and generator bodies.
   @override
   EntityWriter forEachCodegenMember(void Function(MemberEntity member) f) {
     int earlyMemberIndexLimit = _elementMap.prepareForCodegenSerialization();
