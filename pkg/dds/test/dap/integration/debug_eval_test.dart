@@ -74,7 +74,7 @@ void main(List<String> args) {
     });
 
     test(
-        'evaluates complex expressions expressions with evaluateToStringInDebugViews=true',
+        'evaluates complex expressions with evaluateToStringInDebugViews=true',
         () async {
       final client = dap.client;
       final testFile = dap.createTestFile(simpleBreakpointProgram);
