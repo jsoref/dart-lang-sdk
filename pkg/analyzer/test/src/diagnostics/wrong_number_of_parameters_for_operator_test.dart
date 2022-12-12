@@ -37,7 +37,7 @@ class WrongNumberOfParametersForOperatorTest extends PubPackageResolutionTest {
   test_compound_assignment_ok_in_legacy_code() async {
     // Prior to the fix for https://github.com/dart-lang/sdk/issues/46569,
     // attempting to use a binary operator with no args as part of a compound
-    // assignment would crash the analyzer.  Check that that doesn't happen
+    // assignment would crash the analyzer.  Check that doesn't happen
     // anymore.
     await assertErrorsInCode('''
 // @dart=2.9
