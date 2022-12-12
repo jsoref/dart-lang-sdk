@@ -735,7 +735,7 @@ Currently these are interpreted as `List<dynamic>`, which frequently results in
 a cast failure, or requires a workaround. For example:
 ```dart
 List<App> get apps => firebase.apps
-    // explicitly typing the param as dynamic to work-around
+    // explicitly typing the param as dynamic to workaround
     // https://github.com/dart-lang/sdk/issues/33537
     .map((dynamic e) => App.getInstance(e))
     .toList();
