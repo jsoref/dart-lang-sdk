@@ -236,7 +236,7 @@ abstract class CombinedMemberSignatureBase<T> {
   /// identical legacy types, that is, without the need for nnbd top merge, then
   /// the type will be copied over directly and a member created from the
   /// combined member signature will therefore be a legacy member, even though
-  /// it is declared in an opt in class.
+  /// it is declared in an opt-in class.
   ///
   /// To avoid reporting errors as if the member was an opt-in member, it is
   /// marked as nullable-by-default.
