@@ -525,7 +525,7 @@ void main() async {
       expect(result, null);
     });
 
-    test('socket passes messages properly and shutsdown properly', () async {
+    test('socket passes messages properly and shuts down properly', () async {
       await residentListenAndCompile(
           InternetAddress.loopbackIPv4, 0, serverInfo);
 
