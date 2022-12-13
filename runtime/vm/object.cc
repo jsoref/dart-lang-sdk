@@ -17598,7 +17598,7 @@ void Code::Disassemble(DisassemblyFormatter* formatter) const {
 #if defined(INCLUDE_IL_PRINTER)
 #if defined(PRODUCT)
 // In PRODUCT builds we don't have space in Code object to store code comments
-// so we move them into malloced heap (and leak them). This functionality
+// so we move them into mallocated heap (and leak them). This functionality
 // is only indended to be used in AOT compiler so leaking is fine.
 class MallocCodeComments final : public CodeComments {
  public:
