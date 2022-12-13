@@ -1489,7 +1489,7 @@ void IRRegExpMacroAssembler::GrowStack() {
   // Note: :stack and stack_array_cell content might diverge because each
   // instance of :matcher code has its own stack_array_cell embedded into it
   // as a constant but :stack is a local variable and its value might be
-  // comming from OSR or deoptimization. This means we should never use
+  // coming from OSR or deoptimization. This means we should never use
   // stack_array_cell in the body of the :matcher to reload the :stack.
   Value* stack_cell_push = Bind(new (Z) ConstantInstr(stack_array_cell_));
   Value* index_push = Bind(Uint64Constant(0));
