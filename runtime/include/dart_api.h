@@ -3502,7 +3502,7 @@ DART_EXPORT Dart_Handle Dart_SetRootLibrary(Dart_Handle library);
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.
@@ -3521,7 +3521,7 @@ DART_EXPORT Dart_Handle Dart_GetType(Dart_Handle library,
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.
@@ -3540,7 +3540,7 @@ DART_EXPORT Dart_Handle Dart_GetNullableType(Dart_Handle library,
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.
