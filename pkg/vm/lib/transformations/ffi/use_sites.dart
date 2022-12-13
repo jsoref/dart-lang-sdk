@@ -524,7 +524,7 @@ mixin _FfiUseSiteTransformer on FfiTransformer {
     return ConstructorInvocation(constructor, Arguments([pointer]));
   }
 
-  /// Replaces a `.ref=` or `[]=` on a compound pointer extension with a memcopy
+  /// Replaces a `.ref=` or `[]=` on a compound pointer extension with a mem copy
   /// call.
   Expression _replaceSetRef(StaticInvocation node) {
     final target = node.arguments.positional[0]; // Receiver of extension
