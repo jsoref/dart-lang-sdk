@@ -51,7 +51,7 @@ class SimpleBoundTests<T> {
   T h2<R extends FutureOr<T>>() => throw "Unused";
 
   // If `T` is a top type, check that the appropriate
-  // equalities and disequalities hold.
+  // equalities and inequalities hold.
   static void checkAtTopType<T>() {
     var a = SimpleBoundTests<T>();
     checkTypeEquals2(a.f1, a.f2);
