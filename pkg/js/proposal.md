@@ -1187,7 +1187,7 @@ a dart:html-like API without JS dynamic/interface dispatch.
 
 In many cases JS interop can take advantage of virtual dispatch, even with
 `@sealed`, because the JS method it calls will dispatch with normal JS rules
-(i.e. lookup the property on the prototype chain). `@sealed` procludes overrides
+(i.e. lookup the property on the prototype chain). `@sealed` precludes overrides
 of itself with another Dart member, however.
 
 We support virtual Dart methods on JS types, with a bit more work. This doesn't
