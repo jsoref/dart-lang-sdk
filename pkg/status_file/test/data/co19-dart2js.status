@@ -1538,7 +1538,7 @@ LibTest/html/Window/resizeTo_A01_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Float32x4List/Float32x4List.view_A06_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Int32x4/operator_OR_A01_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Uint8ClampedList/buffer_A01_t01: Pass, RuntimeError # Please triage this failure
-WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvenr_t01: RuntimeError # Please triage this failure
+WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvent_t01: RuntimeError # Please triage this failure
 WebPlatformTest/DOMEvents/approved/ProcessingInstruction.DOMCharacterDataModified_t01: Skip # Times out. Please triage this failure
 WebPlatformTest/DOMEvents/approved/addEventListener.optional.useCapture_t01: RuntimeError # Please triage this failure
 WebPlatformTest/Utils/test/asyncTestFail_t01: RuntimeError # Please triage this failure
@@ -2922,7 +2922,7 @@ LibTest/html/Window/resizeTo_A01_t01: RuntimeError # Please triage this failure
 LibTest/math/log_A01_t01: Fail # Please triage this failure.
 LibTest/typed_data/Float32x4List/Float32x4List.view_A06_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Int32x4/operator_OR_A01_t01: RuntimeError # Please triage this failure
-WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvenr_t01: RuntimeError # Please triage this failure
+WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvent_t01: RuntimeError # Please triage this failure
 WebPlatformTest/DOMEvents/approved/ProcessingInstruction.DOMCharacterDataModified_t01: Skip # Times out. Please triage this failure
 WebPlatformTest/DOMEvents/approved/addEventListener.optional.useCapture_t01: RuntimeError # Please triage this failure
 WebPlatformTest/Utils/test/asyncTestFail_t01: RuntimeError # Please triage this failure
@@ -4113,7 +4113,7 @@ LibTest/html/Window/resizeBy_A01_t01: Skip # Times out. Please triage this failu
 LibTest/html/Window/resizeTo_A01_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Float32x4List/Float32x4List.view_A06_t01: RuntimeError # Please triage this failure
 LibTest/typed_data/Int32x4/operator_OR_A01_t01: RuntimeError # Please triage this failure
-WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvenr_t01: RuntimeError # Please triage this failure
+WebPlatformTest/DOMEvents/approved/EventObject.after.dispatchEvent_t01: RuntimeError # Please triage this failure
 WebPlatformTest/DOMEvents/approved/EventObject.multiple.dispatchEvent_t01: RuntimeError # Please triage this failure
 WebPlatformTest/DOMEvents/approved/ProcessingInstruction.DOMCharacterDataModified_t01: Skip # Times out. Please triage this failure
 WebPlatformTest/DOMEvents/approved/addEventListener.optional.useCapture_t01: RuntimeError # Please triage this failure
