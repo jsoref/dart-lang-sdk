@@ -215,7 +215,7 @@ class MoveTopLevelToFile extends RefactoringProducer {
   }
 
   _MemberToMove? _memberFor(CompilationUnitMember declaration, String name) {
-    // TODO(brianwilkeson) Handle other top-level members, including
+    // TODO(brianwilkerson) Handle other top-level members, including
     //  augmentations.
     var unitPath = unitResult.unit.declaredElement?.source.fullName;
     if (unitPath == null) {
