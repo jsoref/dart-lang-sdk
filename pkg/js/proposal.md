@@ -480,7 +480,7 @@ compilers.
 Ideally Dart functions could also be directly passed to JS. However this is not
 the case in dart2js. It is not simple to change that, however.
 
-In the meantime, automatic converisons will be provided:
+In the meantime, automatic conversions will be provided:
 - passing a Dart function type to any JS parameter performs an `allowInterop`
   conversion.
 - passing any Dart value to a JS function type performs an `allowInterop`
