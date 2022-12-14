@@ -269,7 +269,7 @@ abstract class PubspecVisitor<T> {
   T? visitPackageHomepage(PSEntry homepage) => null;
   T? visitPackageIssueTracker(PSEntry issueTracker) => null;
   T? visitPackageName(PSEntry name) => null;
-  T? visitPackageRepository(PSEntry repostory) => null;
+  T? visitPackageRepository(PSEntry repository) => null;
   T? visitPackageVersion(PSEntry version) => null;
 }
 
