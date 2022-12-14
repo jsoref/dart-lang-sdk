@@ -4762,7 +4762,7 @@ class MixinElementImpl extends ClassOrMixinElementImpl implements MixinElement {
 
   @override
   set supertype(InterfaceType? supertype) {
-    throw StateError('Attempt to set a supertype for a mixin declaratio.');
+    throw StateError('Attempt to set a supertype for a mixin declaration.');
   }
 
   @override

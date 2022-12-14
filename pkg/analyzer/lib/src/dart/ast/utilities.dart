@@ -1699,7 +1699,7 @@ class NodeLocator extends UnifyingAstVisitor<void> {
   @override
   void visitConstructorDeclaration(ConstructorDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset &&
         _startOffset == (node.name ?? node.returnType).end) {
       _foundNode = node;
@@ -1712,7 +1712,7 @@ class NodeLocator extends UnifyingAstVisitor<void> {
   @override
   void visitFunctionDeclaration(FunctionDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset && _startOffset == node.name.end) {
       _foundNode = node;
       return;
@@ -1724,7 +1724,7 @@ class NodeLocator extends UnifyingAstVisitor<void> {
   @override
   void visitMethodDeclaration(MethodDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset && _startOffset == node.name.end) {
       _foundNode = node;
       return;
@@ -1829,7 +1829,7 @@ class NodeLocator2 extends UnifyingAstVisitor<void> {
   @override
   void visitConstructorDeclaration(ConstructorDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset &&
         _startOffset == (node.name ?? node.returnType).end) {
       _foundNode = node;
@@ -1842,7 +1842,7 @@ class NodeLocator2 extends UnifyingAstVisitor<void> {
   @override
   void visitFunctionDeclaration(FunctionDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset && _startOffset == node.name.end) {
       _foundNode = node;
       return;
@@ -1854,7 +1854,7 @@ class NodeLocator2 extends UnifyingAstVisitor<void> {
   @override
   void visitMethodDeclaration(MethodDeclaration node) {
     // Names do not have AstNodes but offsets at the end should be treated as
-    // part of the decleration (not parameter list).
+    // part of the declaration (not parameter list).
     if (_startOffset == _endOffset && _startOffset == node.name.end) {
       _foundNode = node;
       return;
