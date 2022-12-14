@@ -368,7 +368,7 @@ Language/Statements/Return/runtime_type_t04: RuntimeError # Issue 26584
 Language/Types/Static_Types/malformed_type_t01: RuntimeError # Issue 21089
 Language/Types/Dynamic_Type_System/malbounded_type_error_t01: RuntimeError # Issue 21088
 Language/Types/Parameterized_Types/malbounded_t06: RuntimeError # Issue 21088
-LibTest/collection/DoubleLinkedQueue/DoubleLinkedQueue_class_A01_t01: Skip # Timesout. Please triage this failure.
+LibTest/collection/DoubleLinkedQueue/DoubleLinkedQueue_class_A01_t01: Skip # Times-out. Please triage this failure.
 LibTest/core/Map/Map_class_A01_t04: Slow, Pass # Please triage this failure
 LibTest/core/Uri/Uri_A06_t03: Slow, Pass # Please triage this failure
 LibTest/math/Point/operator_mult_A02_t01: RuntimeError # Issue 1533
