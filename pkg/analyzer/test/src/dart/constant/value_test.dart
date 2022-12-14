@@ -1957,7 +1957,7 @@ class DartObjectImplTest {
     }
   }
 
-  /// Assert that the result of bit-oring the [left] and [right] operands is the
+  /// Assert that the result of bit-or-ing the [left] and [right] operands is the
   /// [expected] value, or that the operation throws an exception if the
   /// expected value is `null`.
   void _assertEagerOr(
@@ -1973,7 +1973,7 @@ class DartObjectImplTest {
     }
   }
 
-  /// Assert that the result of bit-xoring the [left] and [right] operands is
+  /// Assert that the result of bit-xor-ing the [left] and [right] operands is
   /// the [expected] value, or that the operation throws an exception if the
   /// expected value is `null`.
   void _assertEagerXor(
@@ -2082,7 +2082,7 @@ class DartObjectImplTest {
     }
   }
 
-  /// Assert that the result of logical-oring the [left] and [right] operands is
+  /// Assert that the result of logical-or-ing the [left] and [right] operands is
   /// the [expected] value, or that the operation throws an exception if the
   /// expected value is `null`.
   void _assertLazyOr(
