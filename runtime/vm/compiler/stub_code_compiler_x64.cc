@@ -1564,7 +1564,7 @@ void StubCodeCompiler::GenerateInvokeDartCodeStub(Assembler* assembler) {
 // Input:
 //   R10: number of context variables.
 // Output:
-//   RAX: new, uinitialised allocated Context object.
+//   RAX: new, uninitialised allocated Context object.
 // Clobbered:
 //   R13
 static void GenerateAllocateContextSpaceStub(Assembler* assembler,
