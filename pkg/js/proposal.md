@@ -882,7 +882,7 @@ on any JS object that contains `[Symbol.iterator]`. This requires compilers to
 place `Iterable<T>` members on Object.prototype, or handle this at the
 interceptor level. The current theory is that not many JS APIs return
 iterables (Arrays are much more common). A wrapper-based conversion, either
-implicit or explcit, should be enough to handle this.
+implicit or explicit, should be enough to handle this.
 
 
 ### Stream<T> and JS Async Iterable
