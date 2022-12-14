@@ -30,7 +30,7 @@ macros/multiple_imports: SemiFuzzFailure # probably augment imports that isn't s
 nnbd/constants: SemiFuzzFailure # Reproduced in https://dart-review.googlesource.com/c/sdk/+/242441
 macros/multiple_augment_class: SemiFuzzFailure # https://github.com/dart-lang/sdk/issues/49990
 
-# These tests have "privacy issues" and isn't compatiable with splitting files (fuzzing):
+# These tests have "privacy issues" and isn't compatible with splitting files (fuzzing):
 dart2js/mixin_default_values/main: semiFuzzFailureOnForceRebuildBodies # private method
 dartdevc/factory_patch/main: semiFuzzFailureOnForceRebuildBodies # needs custom libraries.json (and platform?) not setup here
 dartdevc/private_covariant: semiFuzzFailureOnForceRebuildBodies # private method in class
