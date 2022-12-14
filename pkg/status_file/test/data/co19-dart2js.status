@@ -1047,7 +1047,7 @@ LayoutTests/fast/dom/HTMLDialogElement/multiple-centered-dialogs_t01: RuntimeErr
 LayoutTests/fast/dom/HTMLDialogElement/non-anchored-dialog-positioning_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/show-modal-focusing-steps_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/submit-dialog-close-event_t01: Skip # Roll 50 failure
-LayoutTests/fast/dom/HTMLDocument/active-element-gets-unforcusable_t01: Skip # Times out. Please triage this failure
+LayoutTests/fast/dom/HTMLDocument/active-element-gets-unfocusable_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLDocument/set-focus-on-valid-element_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLElement/set-inner-outer-optimization_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLElement/spellcheck_t01: RuntimeError # Please triage this failure
@@ -2161,7 +2161,7 @@ LayoutTests/fast/dom/HTMLDialogElement/submit-dialog-close-event_t01: RuntimeErr
 LayoutTests/fast/dom/HTMLDialogElement/synthetic-click-inert_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-relative_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-static_t01: RuntimeError # Please triage this failure
-LayoutTests/fast/dom/HTMLDocument/active-element-gets-unforcusable_t01: Skip # Times out. Please triage this failure
+LayoutTests/fast/dom/HTMLDocument/active-element-gets-unfocusable_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLDocument/set-focus-on-valid-element_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLElement/attr-dir-auto-change-before-text-node_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLElement/attr-dir-auto-change-child-node_t01: RuntimeError # Please triage this failure
@@ -3485,7 +3485,7 @@ LayoutTests/fast/dom/HTMLDialogElement/submit-dialog-close-event_t01: RuntimeErr
 LayoutTests/fast/dom/HTMLDialogElement/synthetic-click-inert_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-relative_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-static_t01: RuntimeError # Please triage this failure
-LayoutTests/fast/dom/HTMLDocument/active-element-gets-unforcusable_t01: Skip # Times out. Please triage this failure
+LayoutTests/fast/dom/HTMLDocument/active-element-gets-unfocusable_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLDocument/set-focus-on-valid-element_t01: Skip
 LayoutTests/fast/dom/HTMLElement/insertAdjacentHTML-errors_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLElement/set-inner-outer-optimization_t01: RuntimeError # Please triage this failure
@@ -4857,7 +4857,7 @@ LayoutTests/fast/dom/HTMLDialogElement/submit-dialog-close-event_t01: RuntimeErr
 LayoutTests/fast/dom/HTMLDialogElement/synthetic-click-inert_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-relative_t01: RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDialogElement/top-layer-position-static_t01: RuntimeError # Please triage this failure
-LayoutTests/fast/dom/HTMLDocument/active-element-gets-unforcusable_t01: Skip # Times out. Please triage this failure
+LayoutTests/fast/dom/HTMLDocument/active-element-gets-unfocusable_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLDocument/activeElement_t01: Pass, RuntimeError # Please triage this failure
 LayoutTests/fast/dom/HTMLDocument/set-focus-on-valid-element_t01: Skip # Times out. Please triage this failure
 LayoutTests/fast/dom/HTMLElement/attr-dir-auto-change-before-text-node_t01: RuntimeError # Please triage this failure
