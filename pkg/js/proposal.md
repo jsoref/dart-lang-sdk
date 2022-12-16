@@ -1146,7 +1146,7 @@ Object). This reduces the boilerplate that might otherwise be required.
 
 The benefit of this approach is that any JS object can be freely cast to
 `JSObjectMap`, providing efficient access using Map-like APIs. For example,
-let's revist our `UserInfo.toJson()` example:
+let's revisit our `UserInfo.toJson()` example:
 
 ```dart
 @JS()
