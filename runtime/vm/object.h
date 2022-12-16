@@ -1934,7 +1934,7 @@ class Class : public Object {
   UnboxedFieldBitmap CalculateFieldOffsets() const;
 
   // functions_hash_table is in use iff there are at least this many functions.
-  static const intptr_t kFunctionLookupHashTreshold = 16;
+  static const intptr_t kFunctionLookupHashThreshold = 16;
 
   // Initial value for the cached number of type arguments.
   static const intptr_t kUnknownNumTypeArguments = -1;
@@ -2185,7 +2185,7 @@ class UnlinkedCall : public CallSiteData {
 // compilation. Code may contain only original ICData objects.
 //
 // ICData's backing store is an array that logically contains several valid
-// entries followed by a sentinal entry.
+// entries followed by a sentinel entry.
 //
 //   [<entry-0>, <...>, <entry-N>, <sentinel>]
 //
@@ -3224,7 +3224,7 @@ class Function : public Object {
   bool HasOptionalParameters() const;
   // Returns whether the function has optional named parameters.
   bool HasOptionalNamedParameters() const;
-  // Returns whether the fuction has required named parameters.
+  // Returns whether the function has required named parameters.
   bool HasRequiredNamedParameters() const;
   // Returns whether the function has optional positional parameters.
   bool HasOptionalPositionalParameters() const;
@@ -3853,7 +3853,7 @@ class Function : public Object {
   //          dispatchers is not visible. Synthetic code that can trigger
   //          exceptions such as the outer async functions that create Futures
   //          is visible.
-  // instrinsic: Has a hand-written assembly prologue.
+  // intrinsic: Has a hand-written assembly prologue.
   // inlinable: Candidate for inlining. False for functions with features we
   //            don't support during inlining (e.g., optional parameters),
   //            functions which are too big, etc.
@@ -4137,11 +4137,11 @@ class Field : public Object {
   }
 
   bool initializer_changed_after_initialization() const {
-    return InitializerChangedAfterInitializatonBit::decode(kind_bits());
+    return InitializerChangedAfterInitializationBit::decode(kind_bits());
   }
   void set_initializer_changed_after_initialization(bool value) const {
     // TODO(36097): Once concurrent access is possible ensure updates are safe.
-    set_kind_bits(InitializerChangedAfterInitializatonBit::update(
+    set_kind_bits(InitializerChangedAfterInitializationBit::update(
         value, untag()->kind_bits_));
   }
 
@@ -4526,7 +4526,7 @@ class Field : public Object {
     kHasNontrivialInitializerBit,
     kUnboxedBit,
     kReflectableBit,
-    kInitializerChangedAfterInitializatonBit,
+    kInitializerChangedAfterInitializationBit,
     kHasPragmaBit,
     kCovariantBit,
     kGenericCovariantImplBit,
@@ -4542,10 +4542,10 @@ class Field : public Object {
       : public BitField<uint16_t, bool, kHasNontrivialInitializerBit, 1> {};
   class UnboxedBit : public BitField<uint16_t, bool, kUnboxedBit, 1> {};
   class ReflectableBit : public BitField<uint16_t, bool, kReflectableBit, 1> {};
-  class InitializerChangedAfterInitializatonBit
+  class InitializerChangedAfterInitializationBit
       : public BitField<uint16_t,
                         bool,
-                        kInitializerChangedAfterInitializatonBit,
+                        kInitializerChangedAfterInitializationBit,
                         1> {};
   class HasPragmaBit : public BitField<uint16_t, bool, kHasPragmaBit, 1> {};
   class CovariantBit : public BitField<uint16_t, bool, kCovariantBit, 1> {};
@@ -8281,7 +8281,7 @@ class TypeArguments : public Instance {
     // If an entry in the given array contains the given instantiator and
     // function type arguments, returns a KeyLocation with the index of the
     // entry and true. Otherwise, returns a KeyLocation with the index that
-    // would be used if the instantiation for the the given type arguments is
+    // would be used if the instantiation for the given type arguments is
     // added and false.
     static KeyLocation FindKeyOrUnused(const Array& array,
                                        const TypeArguments& instantiator_tav,
@@ -9104,7 +9104,7 @@ class FunctionType : public AbstractType {
                                 Heap::Space space) const;
 
   // Returns the index in the parameter names array of the corresponding flag
-  // for the given parametere index. Also returns (via flag_mask) the
+  // for the given parameter index. Also returns (via flag_mask) the
   // corresponding mask within the flag.
   intptr_t GetRequiredFlagIndex(intptr_t index, intptr_t* flag_mask) const;
 

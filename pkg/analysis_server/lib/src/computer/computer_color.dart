@@ -342,8 +342,8 @@ class _ColorBuilder extends RecursiveAstVisitor<void> {
 
   @override
   void visitPropertyAccess(PropertyAccess node) {
-    // Handle things like CupterinoColors.activeBlue.darkColor where we can't
-    // evaluate the whole expression, but can evaluate CupterinoColors.activeBlue
+    // Handle things like CupertinoColors.activeBlue.darkColor where we can't
+    // evaluate the whole expression, but can evaluate CupertinoColors.activeBlue
     // and read the darkColor.
     if (computer.tryAddColor(
       node,

@@ -75,7 +75,7 @@
 #    version (or add the missing needed one(s)) to avoid triggering an assert.
 #
 # `#nameOKEmpty`: name (as string). Will use an "(unnamed)" default message if
-#    the string is null or empty. Otherwise see the describtion above.
+#    the string is null or empty. Otherwise see the description above.
 #
 # `#names`: A list of names (strings).
 #
@@ -91,7 +91,7 @@
 #
 # `#stringOKEmpty`: string (that isn't a name). Will use an "(empty)" default
 #    message if the string is null or empty.
-#    Otherwise see the describtion above.
+#    Otherwise see the description above.
 #
 # `#type`, #type2`, `#type3`: Kernel types.
 #
@@ -4202,7 +4202,7 @@ InitializeFromDillUnknownProblemNoDump:
 
 WebLiteralCannotBeRepresentedExactly:
   problemMessage: "The integer literal #string can't be represented exactly in JavaScript."
-  correctionMessage: "Try changing the literal to something that can be represented in Javascript. In Javascript #string2 is the nearest value that can be represented exactly."
+  correctionMessage: "Try changing the literal to something that can be represented in JavaScript. In JavaScript #string2 is the nearest value that can be represented exactly."
 
 BoundIssueViaRawTypeWithNonSimpleBounds:
   problemMessage: "Generic type '#name' can't be used without type arguments in a type variable bound."

@@ -1983,7 +1983,7 @@ void GuardFieldClassInstr::EmitNativeCode(FlowGraphCompiler* compiler) {
       // field is still unitialized.
       __ cmpl(field_cid_operand, compiler::Immediate(kIllegalCid));
       // Jump to failure path when guard field has been initialized and
-      // the field and value class ids do not not match.
+      // the field and value class ids do not match.
       __ j(NOT_EQUAL, fail);
 
       if (value_cid == kDynamicCid) {
@@ -2042,7 +2042,7 @@ void GuardFieldClassInstr::EmitNativeCode(FlowGraphCompiler* compiler) {
       }
       __ j(NOT_EQUAL, fail);
     } else if (value_cid == field_cid) {
-      // This would normaly be caught by Canonicalize, but RemoveRedefinitions
+      // This would normally be caught by Canonicalize, but RemoveRedefinitions
       // may sometimes produce the situation after the last Canonicalize pass.
     } else {
       // Both value's and field's class id is known.

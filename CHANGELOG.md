@@ -585,7 +585,7 @@ them, you must set the lower bound on the SDK constraint for your package to
     ```
 
     This change is needed to fix [#36453][] where the dart programs not caring
-    about the terminal settings can inadverently corrupt the terminal settings
+    about the terminal settings can inadvertently corrupt the terminal settings
     when e.g. piping into less.
 
     Furthermore the `echoMode` setting now only controls the `echo` local mode
@@ -995,7 +995,7 @@ them, you must set the lower bound on the SDK constraint for your package to
   removed (they were previously deprecated).  Please use the corresponding
   `lowerCamelCase` constants instead.
 - **Breaking Change** [#48513](https://github.com/dart-lang/sdk/issues/48513):
-  Add a new `allowLegacyUnsafeRenegotiation` poperty to `SecurityContext`,
+  Add a new `allowLegacyUnsafeRenegotiation` property to `SecurityContext`,
   which allows TLS renegotiation for client secure sockets.
 - Add a optional `keyLog` parameter to `SecureSocket.connect` and
   `SecureSocket.startConnect`.
@@ -1015,7 +1015,7 @@ them, you must set the lower bound on the SDK constraint for your package to
 
 - **Breaking change** [#46100](https://github.com/dart-lang/sdk/issues/46100):
   The standalone `dartdevc` tool has been marked deprecated as previously
-  announced and will be deleted in a future Dart stable relase.  This tool
+  announced and will be deleted in a future Dart stable release.  This tool
   was intended for use only by build systems like bazel, `build_web_compilers`
   and `flutter_tools`. The functionality remains available for those systems,
   but it is no longer exposed as a command-line tool in the SDK.
@@ -1804,7 +1804,7 @@ This is a patch release that fixes:
   `a.toUnsigned(32) >>> b` on the VM.
 
 - Prior to Dart 2.14, metadata (annotations) were not permitted to be specified
-  with generic type arguments. This restriction is lifted in Dart Dart 2.14.
+  with generic type arguments. This restriction is lifted in Dart 2.14.
 
   ```dart
   class C<T> {
@@ -2544,7 +2544,7 @@ Updated the Linter to `0.1.129`, which includes:
   `pubspec.lock` for `package_foo`, allowing users to only upgrade a subset of
   dependencies.
 
-- New command `dart pub login` that logs in to pub.dev.
+- New command `dart pub login` that logs into pub.dev.
 
 - The `--server` option to `dart pub publish` and `dart pub uploader` are
   deprecated. Use `publish_to` in your `pubspec.yaml` or set the
@@ -2585,7 +2585,7 @@ This is a patch release that fixes the following issues:
 - compiler error causing incorrect use of positional parameters when named
   parameters should be used instead (issues [flutter/flutter#65324][] and
   [flutter/flutter#68092][]).
-- crashes and/or undefined behavor in AOT compiled code (issues [#43770][] and
+- crashes and/or undefined behavior in AOT compiled code (issues [#43770][] and
   [#43786][]).
 - AOT compilation of classes with more than 64 unboxed fields (issue
   [flutter/flutter#67803][]).
@@ -6820,7 +6820,7 @@ Patch release, resolves one issue:
   `dart:indexed_db`, `dart:svg`, `dart:web_audio`, and `dart:web_gl` that
   correspond to changes to Chrome APIs between v39 and v45. Many of the breaking
   changes represent APIs that would have caused runtime exceptions when compiled
-  to Javascript and run on recent Chrome releases.
+  to JavaScript and run on recent Chrome releases.
 
 - `dart:io`
   - Added `SecurityContext.alpnSupported`, which is true if a platform supports
@@ -7202,7 +7202,7 @@ Patch release, resolves three issues:
 
 ### Tool changes
 
-- `dart2js` and Dartium now support improved Javascript Interoperability via the
+- `dart2js` and Dartium now support improved JavaScript Interoperability via the
   [js package](https://pub.dev/packages/js).
 
 - `docgen` and `dartdocgen` no longer ship in the SDK. The `docgen` sources have
@@ -7415,7 +7415,7 @@ Patch release, resolves three issues:
     - A stack overflow caused by a transformer being run multiple times on the
       package that defines it has been fixed.
 
-    - A transformer that tries to read a non-existent asset in another package
+    - A transformer that tries to read a nonexistent asset in another package
       will now be re-run if that asset is later created.
 
 [package spec proposal]: https://github.com/lrhn/dep-pkgspec
@@ -7563,7 +7563,7 @@ Patch release, resolves three issues:
 
 This is a bug fix release which merges a number of commits from `bleeding_edge`.
 
-- dart2js: Addresses as issue with minified Javascript output with CSP enabled -
+- dart2js: Addresses as issue with minified JavaScript output with CSP enabled -
   [r44453](https://code.google.com/p/dart/source/detail?r=44453)
 
 - Editor: Fixes accidental updating of files in the pub cache during rename

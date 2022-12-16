@@ -1633,7 +1633,7 @@ bool FlowGraphCompiler::NeedsEdgeCounter(BlockEntryInstr* block) {
          (!block->last_instruction()->IsGoto() || block->IsFunctionEntry());
 }
 
-// Allocate a register that is not explictly blocked.
+// Allocate a register that is not explicitly blocked.
 static Register AllocateFreeRegister(bool* blocked_registers) {
   for (intptr_t i = 0; i < kNumberOfCpuRegisters; i++) {
     intptr_t regno = (i + kRegisterAllocationBias) % kNumberOfCpuRegisters;
@@ -1646,7 +1646,7 @@ static Register AllocateFreeRegister(bool* blocked_registers) {
   return kNoRegister;
 }
 
-// Allocate a FPU register that is not explictly blocked.
+// Allocate a FPU register that is not explicitly blocked.
 static FpuRegister AllocateFreeFpuRegister(bool* blocked_registers) {
   for (intptr_t regno = 0; regno < kNumberOfFpuRegisters; regno++) {
     if (!blocked_registers[regno]) {
@@ -3570,7 +3570,7 @@ void FlowGraphCompiler::EmitNativeMove(
     return;
   }
 
-  // Solve descrepancies between container size and payload size.
+  // Solve discrepancies between container size and payload size.
   if (src_payload_type.IsInt() && dst_payload_type.IsInt() &&
       (src_payload_size != src_container_size ||
        dst_payload_size != dst_container_size)) {

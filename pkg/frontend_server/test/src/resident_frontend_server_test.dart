@@ -121,7 +121,7 @@ void main() async {
         soundNullSafety: true,
         verbosity: 'all',
         define: <String>['-Dvar=2'],
-        enableExperiement: <String>['experiemental-flag=vm_name'],
+        enableExperiment: <String>['experimental-flag=vm_name'],
       )));
 
       expect(compileResult1['success'], true);
@@ -525,7 +525,7 @@ void main() async {
       expect(result, null);
     });
 
-    test('socket passes messages properly and shutsdown properly', () async {
+    test('socket passes messages properly and shuts down properly', () async {
       await residentListenAndCompile(
           InternetAddress.loopbackIPv4, 0, serverInfo);
 

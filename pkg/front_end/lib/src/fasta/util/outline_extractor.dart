@@ -275,7 +275,7 @@ class _Processor {
     Map<TopLevel, List<TopLevel>> imports = {};
 
     // Mark all top-level in entry point. Also include parts and exports (and
-    // exports exports etc) of the entry point.
+    // exports etc) of the entry point.
     Set<TopLevel> closed = {};
     for (TopLevel entryPoint in entryPoints) {
       await _premarkTopLevel(worklist, closed, entryPoint);

@@ -3664,7 +3664,7 @@ FlowGraph* FlowGraphBuilder::BuildGraphOfImplicitClosureFunction(
       // Instantiate a flattened type arguments vector which
       // includes type arguments corresponding to superclasses.
       // TranslateInstantiatedTypeArguments is smart enough to
-      // avoid instantiation and resuse passed function type arguments
+      // avoid instantiation and reuse passed function type arguments
       // if there are no extra type arguments in the flattened vector.
       const auto& instantiated_type_arguments =
           TypeArguments::ZoneHandle(Z, result_type.arguments());
@@ -4345,7 +4345,7 @@ Fragment FlowGraphBuilder::PopFromStackToTypedDataBase(
                                          /*index_unboxed=*/false);
     offset_in_bytes += RepresentationUtils::ValueSize(representation);
   }
-  body += DropTempsPreserveTop(num_defs);  // Drop chunck defs keep TypedData.
+  body += DropTempsPreserveTop(num_defs);  // Drop chunk defs keep TypedData.
   return body;
 }
 

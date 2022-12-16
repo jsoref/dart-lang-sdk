@@ -2357,7 +2357,7 @@ static void PrintInboundReferences(Thread* thread,
   }
 
   // We nil out the array after generating the response to prevent
-  // reporting suprious references when repeatedly looking for the
+  // reporting spurious references when repeatedly looking for the
   // references to an object.
   for (intptr_t i = 0; i < path.Length(); i++) {
     path.SetAt(i, Object::null_object());
@@ -4000,7 +4000,7 @@ static void RemoveBreakpoint(Thread* thread, JSONStream* js) {
   ObjectIdRing::LookupResult lookup_result;
   Isolate* isolate = thread->isolate();
   Breakpoint* bpt = LookupBreakpoint(isolate, bpt_id, &lookup_result);
-  // TODO(turnidge): Should we return a different error for bpts whic
+  // TODO(turnidge): Should we return a different error for bpts which
   // have been already removed?
   if (bpt == NULL) {
     PrintInvalidParamError(js, "breakpointId");

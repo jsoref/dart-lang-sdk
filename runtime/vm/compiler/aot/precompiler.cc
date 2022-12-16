@@ -145,7 +145,7 @@ struct RetainReasons : public AllStatic {
   // The object is a function and symbolic stack traces are enabled.
   static constexpr const char* kSymbolicStackTraces =
       "needed for symbolic stack traces";
-  // The object is a parent function function of a non-inlined local function.
+  // The object is a parent function of a non-inlined local function.
   static constexpr const char* kLocalParent = "parent of a local function";
   // The object is a main function of the root library.
   static constexpr const char* kMainFunction =
@@ -2468,7 +2468,7 @@ static bool IsUserDefinedClass(Zone* zone,
 }
 
 /// Updates |visited| weak table with information about whether object
-/// (transitevly) references constants of user-defined classes: |kDrop|
+/// (transitively) references constants of user-defined classes: |kDrop|
 /// indicates it does, |kRetain| - does not.
 class ConstantInstanceVisitor {
  public:
@@ -3365,7 +3365,7 @@ void Precompiler::Obfuscate() {
     Library::RegisterLibraries(T, libraries_);
   }
 
-  // Obfuscation is done. Move obfuscation map into malloced memory.
+  // Obfuscation is done. Move obfuscation map into mallocated memory.
   IG->set_obfuscation_map(Obfuscator::SerializeMap(T));
 
   // Discard obfuscation mappings to avoid including them into snapshot.
@@ -3544,10 +3544,10 @@ bool PrecompileParsedFunctionHelper::Compile(CompilationPipeline* pipeline) {
       // too big). If we were adding objects into the global pool directly
       // these recompilations would leave dead entries behind.
       // Instead we add objects into an intermediary pool which gets
-      // commited into the global object pool at the end of the compilation.
+      // committed into the global object pool at the end of the compilation.
       // This makes an assumption that global object pool itself does not
       // grow during code generation - unfortunately this is not the case
-      // becase we might have nested code generation (i.e. we might generate
+      // because we might have nested code generation (i.e. we might generate
       // some stubs). If this indeed happens we retry the compilation.
       // (See TryCommitToParent invocation below).
       compiler::ObjectPoolBuilder object_pool_builder(
@@ -3767,7 +3767,7 @@ Obfuscator::Obfuscator(Thread* thread, const String& private_key)
   }
   auto zone = thread->zone();
 
-  // Create ObfuscationState from ObjectStore::obfusction_map().
+  // Create ObfuscationState from ObjectStore::obfuscation_map().
   ObjectStore* store = isolate_group->object_store();
   Array& obfuscation_state = Array::Handle(zone, store->obfuscation_map());
 

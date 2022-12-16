@@ -199,7 +199,7 @@ class OSThread : public BaseThread {
   typedef void (*ThreadDestructor)(void* parameter);
 
   // Start a thread running the specified function. Returns 0 if the
-  // thread started successfuly and a system specific error code if
+  // thread started successfully and a system specific error code if
   // the thread failed to start.
   static int Start(const char* name,
                    ThreadStartFunction function,
@@ -219,7 +219,7 @@ class OSThread : public BaseThread {
   static bool Compare(ThreadId a, ThreadId b);
 
   // This function can be called only once per OSThread, and should only be
-  // called when the retunred id will eventually be passed to OSThread::Join().
+  // called when the returned id will eventually be passed to OSThread::Join().
   static ThreadJoinId GetCurrentThreadJoinId(OSThread* thread);
 
   // Called at VM startup and shutdown.

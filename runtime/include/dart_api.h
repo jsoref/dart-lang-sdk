@@ -1374,7 +1374,7 @@ DART_EXPORT void Dart_StartProfiling(void);
 /**
  * Stops the CPU sampling profiler.
  *
- * Note that some profile samples might still be taken after this fucntion
+ * Note that some profile samples might still be taken after this function
  * returns due to the asynchronous nature of the implementation on some
  * platforms.
  */
@@ -1709,8 +1709,8 @@ DART_EXPORT DART_WARN_UNUSED_RESULT Dart_Handle Dart_RunLoop(void);
  * \param error A non-NULL pointer which will hold an error message if the call
  *   fails. The error has to be free()ed by the caller.
  *
- * \return If successful the VM takes owernship of the isolate and takes care
- *   of its message loop. If not successful the caller retains owernship of the
+ * \return If successful the VM takes ownership of the isolate and takes care
+ *   of its message loop. If not successful the caller retains ownership of the
  *   isolate.
  */
 DART_EXPORT DART_WARN_UNUSED_RESULT bool Dart_RunLoopAsync(
@@ -1970,7 +1970,7 @@ DART_EXPORT Dart_Handle Dart_FunctionName(Dart_Handle function);
 DART_EXPORT Dart_Handle Dart_FunctionOwner(Dart_Handle function);
 
 /**
- * Determines whether a function handle referes to a static function
+ * Determines whether a function handle refers to a static function
  * of method.
  *
  * For the purposes of the embedding API, a top-level function is
@@ -3502,7 +3502,7 @@ DART_EXPORT Dart_Handle Dart_SetRootLibrary(Dart_Handle library);
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.
@@ -3521,7 +3521,7 @@ DART_EXPORT Dart_Handle Dart_GetType(Dart_Handle library,
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.
@@ -3540,7 +3540,7 @@ DART_EXPORT Dart_Handle Dart_GetNullableType(Dart_Handle library,
  * \param number_of_type_arguments Number of type arguments.
  *   For non parametric types the number of type arguments would be 0.
  * \param type_arguments Pointer to an array of type arguments.
- *   For non parameteric types a NULL would be passed in for this argument.
+ *   For non parametric types a NULL would be passed in for this argument.
  *
  * \return If no error occurs, the type is returned.
  *   Otherwise an error handle is returned.

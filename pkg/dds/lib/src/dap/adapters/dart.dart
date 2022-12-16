@@ -1298,7 +1298,7 @@ abstract class DartDebugAdapter<TL extends LaunchRequestArguments,
     sendResponse(SetExceptionBreakpointsResponseBody());
   }
 
-  /// Shuts down/detatches from the debugee and cleans up.
+  /// Shuts down/detaches from the debugee and cleans up.
   ///
   /// This is called by [disconnectRequest] and [terminateRequest] but may also
   /// be called if the client just disconnects from the server without calling
@@ -1311,7 +1311,7 @@ abstract class DartDebugAdapter<TL extends LaunchRequestArguments,
     _dds = null;
   }
 
-  /// Shuts down the debug adapter, including terminating/detatching from the
+  /// Shuts down the debug adapter, including terminating/detaching from the
   /// debugee if required.
   @nonVirtual
   Future<void> shutdown() async {
@@ -1494,7 +1494,7 @@ abstract class DartDebugAdapter<TL extends LaunchRequestArguments,
             : frames.length;
 
         // Find the first async marker, because some functionality only works
-        // up until the first async bounday (e.g. rewind) since we're showing
+        // up until the first async boundary (e.g. rewind) since we're showing
         // the user async frames which are out-of-sync with the real frames
         // past that point.
         final firstAsyncMarkerIndex = frames.indexWhere(

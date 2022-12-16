@@ -25,7 +25,7 @@ import 'package:meta/meta.dart';
 /// optimistically assume the constraint will be satisfied.
 ///
 /// For example if we are inferring type parameter A, and we ask if
-/// `A <: num`, this will record that A must be a subytpe of `num`. It also
+/// `A <: num`, this will record that A must be a subtype of `num`. It also
 /// handles cases when A appears as part of the structure of another type, for
 /// example `Iterable<A> <: Iterable<num>` would infer the same constraint
 /// (due to covariant generic types) as would `() -> A <: () -> num`. In
@@ -459,21 +459,21 @@ class GenericInferrer {
     }
 
     // Only report unique constraint origins.
-    Iterable<_TypeConstraint> isSatisified(bool expected) => constraintsByOrigin
+    Iterable<_TypeConstraint> isSatisfied(bool expected) => constraintsByOrigin
         .values
         .where((l) =>
             l.every((c) => c.isSatisfiedBy(_typeSystem, inferred)) == expected)
         .expand((i) => i);
 
-    String unsatisified = _formatConstraints(isSatisified(false));
-    String satisified = _formatConstraints(isSatisified(true));
+    String unsatisfied = _formatConstraints(isSatisfied(false));
+    String satisfied = _formatConstraints(isSatisfied(true));
 
-    assert(unsatisified.isNotEmpty);
-    if (satisified.isNotEmpty) {
-      satisified = "\nThe type '$inferredStr' was inferred from:\n$satisified";
+    assert(unsatisfied.isNotEmpty);
+    if (satisfied.isNotEmpty) {
+      satisfied = "\nThe type '$inferredStr' was inferred from:\n$satisfied";
     }
 
-    return '\n\n$intro\n$unsatisified$satisified\n\n'
+    return '\n\n$intro\n$unsatisfied$satisfied\n\n'
         'Consider passing explicit type argument(s) to the generic.\n\n';
   }
 

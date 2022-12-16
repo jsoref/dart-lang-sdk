@@ -34,7 +34,7 @@ bool checkNonExistentFileSystemException(e, str) {
   Expect.isTrue(e is PathNotFoundException);
   Expect.isTrue(e.osError != null);
   Expect.isTrue(e.toString().indexOf(str) != -1);
-  // File not not found has error code 2 on all supported platforms.
+  // File not found has error code 2 on all supported platforms.
   Expect.equals(2, e.osError.errorCode);
   return true;
 }
@@ -137,7 +137,7 @@ void testCreateInNonExistentDirectory() {
   Directory temp = tempDir();
   var file = new File("${temp.path}/nonExistentDirectory/newFile");
 
-  // Create in non-existent directory should throw exception.
+  // Create in nonexistent directory should throw exception.
   Expect.throws(() => file.createSync(),
       (e) => checkCreateInNonExistentFileSystemException(e));
 
@@ -153,7 +153,7 @@ bool checkResolveSymbolicLinksOnNonExistentFileSystemException(e) {
   Expect.isTrue(e is FileSystemException);
   Expect.isTrue(e.osError != null);
   Expect.isTrue(e.toString().indexOf("Cannot resolve symbolic links") != -1);
-  // File not not found has error code 2 on all supported platforms.
+  // File not found has error code 2 on all supported platforms.
   Expect.equals(2, e.osError.errorCode);
 
   return true;
@@ -164,7 +164,7 @@ void testResolveSymbolicLinksOnNonExistentDirectory() {
   Directory temp = tempDir();
   var file = new File("${temp.path}/nonExistentDirectory");
 
-  // Full path non-existent directory should throw exception.
+  // Full path nonexistent directory should throw exception.
   Expect.throws(() => file.resolveSymbolicLinksSync(),
       (e) => checkResolveSymbolicLinksOnNonExistentFileSystemException(e));
 

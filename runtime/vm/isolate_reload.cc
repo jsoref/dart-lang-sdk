@@ -199,7 +199,7 @@ InstanceMorpher* InstanceMorpher::CreateFromClassDescriptors(
         mapping->Add({from_field.HostOffset(), from_box_cid});
         mapping->Add({to_field.HostOffset(), to_box_cid});
 
-        // Field did exist in old class deifnition.
+        // Field did exist in old class definition.
         new_field = false;
         break;
       }
@@ -1361,7 +1361,7 @@ void ProgramReloadContext::CheckpointClasses() {
 
   // Before this operation class table which is used for heap scanning and
   // the class table used for program loading are the same. After this step
-  // they will become different until reload is commited (or rolled back).
+  // they will become different until reload is committed (or rolled back).
   //
   // Note that because GC is always reading from heap_walk_class_table and
   // we are not changing that, there is no reason to wait for sweeping

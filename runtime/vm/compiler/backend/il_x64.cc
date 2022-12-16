@@ -458,7 +458,7 @@ static bool IsPowerOfTwoKind(intptr_t v1, intptr_t v2) {
 LocationSummary* IfThenElseInstr::MakeLocationSummary(Zone* zone,
                                                       bool opt) const {
   comparison()->InitializeLocationSummary(zone, opt);
-  // TODO(dartbug.com/30952) support convertion of Register to corresponding
+  // TODO(dartbug.com/30952) support conversion of Register to corresponding
   // least significant byte register (e.g. RAX -> AL, RSI -> SIL, r15 -> r15b).
   comparison()->locs()->set_out(0, Location::RegisterLocation(RDX));
   return comparison()->locs();
@@ -661,7 +661,7 @@ LocationSummary* AssertAssignableInstr::MakeLocationSummary(Zone* zone,
   // We invoke a stub that can potentially clobber any CPU register
   // but can only clobber FPU registers on the slow path when
   // entering runtime. Preserve all FPU registers that are
-  // not guarateed to be preserved by the ABI.
+  // not guaranteed to be preserved by the ABI.
   const intptr_t kCpuRegistersToPreserve =
       kDartAvailableCpuRegs & ~kNonChangeableInputRegs;
   const intptr_t kFpuRegistersToPreserve =
@@ -2346,7 +2346,7 @@ void GuardFieldClassInstr::EmitNativeCode(FlowGraphCompiler* compiler) {
 
       __ j(NOT_EQUAL, fail);
     } else if (value_cid == field_cid) {
-      // This would normaly be caught by Canonicalize, but RemoveRedefinitions
+      // This would normally be caught by Canonicalize, but RemoveRedefinitions
       // may sometimes produce the situation after the last Canonicalize pass.
     } else {
       // Both value's and field's class id is known.

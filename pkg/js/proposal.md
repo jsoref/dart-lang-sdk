@@ -480,7 +480,7 @@ compilers.
 Ideally Dart functions could also be directly passed to JS. However this is not
 the case in dart2js. It is not simple to change that, however.
 
-In the meantime, automatic converisons will be provided:
+In the meantime, automatic conversions will be provided:
 - passing a Dart function type to any JS parameter performs an `allowInterop`
   conversion.
 - passing any Dart value to a JS function type performs an `allowInterop`
@@ -735,7 +735,7 @@ Currently these are interpreted as `List<dynamic>`, which frequently results in
 a cast failure, or requires a workaround. For example:
 ```dart
 List<App> get apps => firebase.apps
-    // explicitly typing the param as dynamic to work-around
+    // explicitly typing the param as dynamic to workaround
     // https://github.com/dart-lang/sdk/issues/33537
     .map((dynamic e) => App.getInstance(e))
     .toList();
@@ -882,7 +882,7 @@ on any JS object that contains `[Symbol.iterator]`. This requires compilers to
 place `Iterable<T>` members on Object.prototype, or handle this at the
 interceptor level. The current theory is that not many JS APIs return
 iterables (Arrays are much more common). A wrapper-based conversion, either
-implicit or explcit, should be enought to handle this.
+implicit or explicit, should be enough to handle this.
 
 
 ### Stream<T> and JS Async Iterable
@@ -1146,7 +1146,7 @@ Object). This reduces the boilerplate that might otherwise be required.
 
 The benefit of this approach is that any JS object can be freely cast to
 `JSObjectMap`, providing efficient access using Map-like APIs. For example,
-let's revist our `UserInfo.toJson()` example:
+let's revisit our `UserInfo.toJson()` example:
 
 ```dart
 @JS()
@@ -1187,7 +1187,7 @@ a dart:html-like API without JS dynamic/interface dispatch.
 
 In many cases JS interop can take advantage of virtual dispatch, even with
 `@sealed`, because the JS method it calls will dispatch with normal JS rules
-(i.e. lookup the property on the prototype chain). `@sealed` procludes overrides
+(i.e. lookup the property on the prototype chain). `@sealed` precludes overrides
 of itself with another Dart member, however.
 
 We support virtual Dart methods on JS types, with a bit more work. This doesn't
@@ -1588,7 +1588,7 @@ a shared way.
 
 Dynamic dispatch, calling conventions, and runtime type checks, and native SDK
 types are different between the two compilers, so those details would require
-separete work.
+separate work.
 
 
 ### Q: If a JS API returns "Object" does this break dart2js tree shaking?

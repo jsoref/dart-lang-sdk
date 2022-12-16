@@ -143,7 +143,7 @@ typedef struct {
  * \return Returns a pointer to a Dart_EmbedderInformation structure.
  * The embedder keeps the ownership of the structure and any field in it.
  * The embedder must ensure that the structure will remain valid until the
- * next invokation of the callback.
+ * next invocation of the callback.
  */
 typedef void (*Dart_EmbedderInformationCallback)(
     Dart_EmbedderInformation* info);
@@ -364,7 +364,7 @@ DART_EXPORT bool Dart_IsReloading();
  *   "Embedder" - Execution of Dart embedder code
  *   "GC" - Execution of Dart Garbage Collector
  *   "Isolate" - Dart Isolate lifecycle execution
- *   "VM" - Excution in Dart VM runtime code
+ *   "VM" - Execution in Dart VM runtime code
  *   "" - None
  *
  *  When "all" is specified all the categories are enabled.
@@ -518,7 +518,7 @@ typedef void (*Dart_TimelineRecorderCallback)(
  * will be remembered. Providing a NULL callback will clear the registration
  * (i.e., a NULL callback produced a no-op instead of a crash).
  *
- * Setting a callback is insuffient to receive events through the callback. The
+ * Setting a callback is insufficient to receive events through the callback. The
  * VM flag `timeline_recorder` must also be set to `callback`.
  */
 DART_EXPORT void Dart_SetTimelineRecorderCallback(

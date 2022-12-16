@@ -2336,7 +2336,7 @@ class _Universe {
 ///
 ///   When first element is an Rti: Creates binding Rti wrapping the first
 ///   element. Binding Rtis are flattened: if the first element is a binding
-///   Rti, the new binding Rti has the concatentation of the first element
+///   Rti, the new binding Rti has the concatenation of the first element
 ///   bindings and new type.
 ///
 ///
@@ -2354,8 +2354,8 @@ class _Universe {
 /// type is passed without creating a 1-tuple object. This means that the
 /// interface Rti for, say, `Map<num,dynamic>` serves as two environments with
 /// different shapes. It is a class environment (K=num, V=dynamic) and a simple
-/// 1-tuple environment. This is supported by index '0' refering to the whole
-/// type, and '1 and '2' refering to K and V positionally:
+/// 1-tuple environment. This is supported by index '0' referring to the whole
+/// type, and '1 and '2' referring to K and V positionally:
 ///
 ///     interface("Map", [num,dynamic])
 ///     0                 1   2

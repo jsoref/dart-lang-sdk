@@ -540,7 +540,7 @@ void StubCodeCompiler::GenerateRangeError(Assembler* assembler,
       __ SmiUntag(TMP2, RangeErrorABI::kIndexReg);
       __ beq(TMP, TMP2, &length);  // No overflow.
       {
-        // Allocate a mint, reload the two registers and popualte the mint.
+        // Allocate a mint, reload the two registers and populate the mint.
         __ PushRegister(NULL_REG);
         __ CallRuntime(kAllocateMintRuntimeEntry, /*argument_count=*/0);
         __ PopRegister(RangeErrorABI::kIndexReg);
@@ -1950,7 +1950,7 @@ static void GenerateAllocateObjectHelper(Assembler* assembler,
       __ sx(AllocateObjectABI::kTypeArgumentsReg, Address(kTypeOffsetReg, 0));
 
       __ Bind(&not_parameterized_case);
-    }  // kClsIdReg = R4, kTypeOffestReg = R5
+    }  // kClsIdReg = R4, kTypeOffsetReg = R5
 
     __ AddImmediate(AllocateObjectABI::kResultReg,
                     AllocateObjectABI::kResultReg, kHeapObjectTag);
@@ -3046,7 +3046,7 @@ void StubCodeCompiler::GenerateJumpToFrameStub(Assembler* assembler) {
   Label exit_through_non_ffi;
   // Check if we exited generated from FFI. If so do transition - this is needed
   // because normally runtime calls transition back to generated via destructor
-  // of TransititionGeneratedToVM/Native that is part of runtime boilerplate
+  // of TransitionGeneratedToVM/Native that is part of runtime boilerplate
   // code (see DEFINE_RUNTIME_ENTRY_IMPL in runtime_entry.h). Ffi calls don't
   // have this boilerplate, don't have this stack resource, have to transition
   // explicitly.

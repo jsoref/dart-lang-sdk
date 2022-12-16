@@ -72,7 +72,7 @@ class SsaOptimizerTask extends CompilerTask {
       codegen.tracer.traceGraph(phase.name, graph);
       assert(graph.isValid(), 'Graph not valid after ${phase.name}');
       assert(phase.validPostcondition(graph),
-          'Graph does not satify phase postcondition after ${phase.name}');
+          'Graph does not satisfy phase postcondition after ${phase.name}');
     }
 
     SsaCodeMotion codeMotion;
@@ -930,7 +930,7 @@ class SsaInstructionSimplifier extends HBaseVisitor<HInstruction>
         method, [receiver], returnType, nativeBehavior,
         sourceInformation: node.sourceInformation);
     _registry.registerStaticUse(StaticUse.methodInlining(method, null));
-    // Assume Native getters effect-free as an approximantion to being
+    // Assume Native getters effect-free as an approximation to being
     // idempotent.
     // TODO(sra): [native.BehaviorBuilder.buildMethodBehavior] should do this
     // for us.
@@ -1523,7 +1523,7 @@ class SsaInstructionSimplifier extends HBaseVisitor<HInstruction>
       // We don't expect a non-integer first input to the fixed-size allocation,
       // but checking the input is an integer ensures we do not replace a
       // HGetlength with a reference to something with a type that will confuse
-      // bounds check eliminiation.
+      // bounds check elimination.
       if (lengthInput.isInteger(_abstractValueDomain).isDefinitelyTrue) {
         // TODO(sra). HGetLength may have a better type than [lengthInput] as
         // the allocation may throw on an out-of-range input. Typically the
@@ -1929,7 +1929,7 @@ class SsaInstructionSimplifier extends HBaseVisitor<HInstruction>
         if (value is IntConstantValue) {
           // Only constant-fold int.toString() when Dart and JS results the
           // same.
-          // TODO(18103): We should be able to remove this work-around when
+          // TODO(18103): We should be able to remove this workaround when
           // issue 18103 is resolved by providing the correct string.
           if (!value.isUInt32()) return null;
           return asString('${value.intValue}');
@@ -3225,7 +3225,7 @@ class SsaGlobalValueNumberer implements OptimizationPhase {
 // 1) can be used for GVN, and
 // 2) do not use definitions of their own block.
 //
-// A basic block looks at its sucessors and finds the intersection of
+// A basic block looks at its successors and finds the intersection of
 // these computed ValueSet. It moves all instructions of the
 // intersection into its own list of instructions.
 class SsaCodeMotion extends HBaseVisitor<void> implements OptimizationPhase {

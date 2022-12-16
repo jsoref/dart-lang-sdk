@@ -172,7 +172,7 @@ class ContextBuilderImpl implements ContextBuilder {
     }
   }
 
-  /// Return the SDK that that should be used to analyze code.
+  /// Return the SDK that should be used to analyze code.
   DartSdk _createSdk({
     required Workspace workspace,
     String? sdkPath,

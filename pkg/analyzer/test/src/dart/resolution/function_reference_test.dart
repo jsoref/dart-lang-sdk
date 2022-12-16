@@ -3625,7 +3625,7 @@ FunctionReference
 ''');
   }
 
-  test_staticMethod_explicitReciver_prefix() async {
+  test_staticMethod_explicitReceiver_prefix() async {
     newFile('$testPackageLibPath/a.dart', '''
 class A {
   static void foo<T>(T a) {}

@@ -25,7 +25,7 @@ part of touch;
 ///      properties of the drag to you while the touch is happening and at the
 ///      end of the drag sequence. This behavior will NOT perform the actual
 ///      dragging (redrawing the element) for you, this responsibility is left to
-///      the client code. This behavior contains a work around for a mobile
+///      the client code. This behavior contains a workaround for a mobile
 ///      safari bug where the 'touchend' event is not dispatched when the touch
 ///      goes past the bottom of the browser window.
 ///      This is intended to work well in iframes.
@@ -142,7 +142,7 @@ class TouchHandler {
     return absVelocity * (velocity < 0 ? -1 : 1);
   }
 
-  /// Start listenting for events.
+  /// Start listening for events.
   /// If [capture] is True the TouchHandler should listen during the capture
   /// phase.
   void enable([bool capture = false]) {

@@ -495,7 +495,7 @@ class ClassDeserializationCluster : public DeserializationCluster {
 // explicitly as Array objects into the snapshot and instead utilize a different
 // encoding: objects in a cluster representing a canonical set are sorted
 // to appear in the same order they appear in the Array representing the set,
-// and we additionaly write out array of values describing gaps between objects.
+// and we additionally write out array of values describing gaps between objects.
 //
 // In some situations not all canonical objects of the some type need to
 // be added to the resulting canonical set because they are cached in some
@@ -1100,7 +1100,7 @@ DART_FORCE_INLINE static CodePtr GetCodeAndEntryPointByIndex(
   }
   code_index -= base;
 
-  // At this point code_index is refering to a code object which is either
+  // At this point code_index is referring to a code object which is either
   // discarded or exists in the Code cluster. Non-discarded Code objects
   // are associated with the tail of the instruction table and have the
   // same order there and in the Code cluster. This means that
@@ -6158,7 +6158,7 @@ class VMSerializationRoots : public SerializationRoots {
     }
 
     if (!should_write_symbols_ && s->profile_writer() != nullptr) {
-      // If writing V8 snapshot profile create an artifical node representing
+      // If writing V8 snapshot profile create an artificial node representing
       // VM isolate symbol table.
       ASSERT(!s->IsReachable(symbols_.ptr()));
       s->AssignArtificialRef(symbols_.ptr());
@@ -7780,7 +7780,7 @@ ZoneGrowableArray<Object*>* Serializer::Serialize(SerializationRoots* roots) {
   // computation. Note that reachability is computed monotonically (an object
   // can change from not reachable to reachable, but never the reverse), which
   // is technically a conservative approximation for WSRs, but doing a strict
-  // analysis that allows non-motonoic reachability may not halt.
+  // analysis that allows non-monotonic reachability may not halt.
   //
   // To see this, take a WSR whose replacement causes the target of another WSR
   // to become reachable, which then causes the target of the first WSR to
@@ -7913,7 +7913,7 @@ ZoneGrowableArray<Object*>* Serializer::Serialize(SerializationRoots* roots) {
     // targets in reachable WSRs if writing a v8 snapshot profile, since they
     // will be used in AttributeReference().
     //
-    // Unreachable WSRs may also need artifical nodes, as they may be members
+    // Unreachable WSRs may also need artificial nodes, as they may be members
     // of other unreachable objects that have artificial nodes in the profile,
     // but they are instead lazily handled in CreateArtificialNodeIfNeeded().
     wsr_cluster->CreateArtificialTargetNodesIfNeeded(this);
@@ -7968,7 +7968,7 @@ void Serializer::WriteDispatchTable(const Array& entries) {
 #if defined(DART_PRECOMPILER)
   if (kind() != Snapshot::kFullAOT) return;
 
-  // Create an artifical node to which the bytes should be attributed. We
+  // Create an artificial node to which the bytes should be attributed. We
   // don't attribute them to entries.ptr(), as we don't want to attribute the
   // bytes for printing out a length of 0 to Object::null() when the dispatch
   // table is empty.
@@ -8030,7 +8030,7 @@ void Serializer::WriteDispatchTable(const Array& entries) {
       }
       continue;
     }
-    // Emit any outsanding repeat count before handling the new code value.
+    // Emit any outstanding repeat count before handling the new code value.
     if (repeat_count > 0) {
       Write(repeat_count);
       repeat_count = 0;

@@ -172,7 +172,7 @@ class InfiniteLoopTask : public ThreadPool::Task {
       ml.Notify();
     }
     Dart_Handle result = Dart_Invoke(lib, NewString("testMain"), 0, NULL);
-    // Test should run an inifinite loop and expect that to be killed.
+    // Test should run an infinite loop and expect that to be killed.
     EXPECT(Dart_IsError(result));
     EXPECT_STREQ("isolate terminated by Isolate.kill", Dart_GetError(result));
     {
@@ -590,7 +590,7 @@ static Dart_NativeFunction CurrentStackTraceNativeLookup(
 
 TEST_CASE(DartAPI_CurrentStackTraceInfo) {
   const char* kScriptChars = R"(
-@pragma("vm:external-name", "CurrentStackTraceNatve")
+@pragma("vm:external-name", "CurrentStackTraceNative")
 external inspectStack();
 foo(n) => n == 1 ? inspectStack() : foo(n-1);
 testMain() => foo(100);
@@ -3287,7 +3287,7 @@ static void SlowWeakPersistentHandle(void* isolate_callback_data, void* peer) {
   (*count)++;
 }
 
-TEST_CASE(DartAPI_SlowWeakPersistenhandle) {
+TEST_CASE(DartAPI_SlowWeakPersistentHandle) {
   Dart_WeakPersistentHandle handles[20];
   intptr_t count = 0;
 
@@ -5091,7 +5091,7 @@ TEST_CASE(DartAPI_SetStickyError) {
   EXPECT(Dart_GetStickyError() == Dart_Null());
 }
 
-TEST_CASE(DartAPI_TypeGetNonParamtericTypes) {
+TEST_CASE(DartAPI_TypeGetNonParametricTypes) {
   const char* kScriptChars =
       "class MyClass0 {\n"
       "}\n"
@@ -10131,7 +10131,7 @@ void main() {
 
 // There exists another test by name DartAPI_Invoke_CrossLibrary.
 // However, that currently fails for the dartk configuration as it
-// uses Dart_LoadLibray. This test here effectively tests the same
+// uses Dart_LoadLibrary. This test here effectively tests the same
 // functionality but invokes a function from an imported standard
 // library.
 TEST_CASE(DartAPI_InvokeImportedFunction) {

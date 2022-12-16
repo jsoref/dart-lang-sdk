@@ -252,7 +252,7 @@ class Class {
   final bool isMixinApplicationWithMembers;
 
   // If the class implements a function type, and the type is encoded in the
-  // metatada table, then this field contains the index into that field.
+  // metadata table, then this field contains the index into that field.
   final js.Expression? functionTypeIndex;
 
   /// Whether the class must be evaluated eagerly.
@@ -462,7 +462,7 @@ class InstanceMethod extends DartMethod {
   /// `true` if the tear-off needs to access methods directly rather than rely
   /// on JavaScript prototype lookup. This happens when a tear-off getter is
   /// called via `super.method` and there is a shadowing definition of `method`
-  /// in some sublcass.
+  /// in some subclass.
   // TODO(sra): Consider instead having an alias per stub, creating tear-off
   // trampolines that target the stubs.
   final bool tearOffNeedsDirectAccess;

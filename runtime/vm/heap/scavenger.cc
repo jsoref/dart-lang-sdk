@@ -90,7 +90,7 @@ static uword ForwardingHeader(ObjectPtr target) {
 // here as relaxed so the C++ compiler still has the freedom to reorder them.
 NO_SANITIZE_THREAD
 static void objcpy(void* dst, const void* src, size_t size) {
-  // A memcopy specialized for objects. We can assume:
+  // A mem copy specialized for objects. We can assume:
   //  - dst and src do not overlap
   ASSERT(
       (reinterpret_cast<uword>(dst) + size <= reinterpret_cast<uword>(src)) ||
@@ -157,7 +157,7 @@ class ScavengerVisitorBase : public ObjectPointerVisitor {
     // update is needed. If the underlying typed data is internal, the pointer
     // must be updated if the typed data was copied or promoted. We cannot
     // safely dereference the underlying typed data to make this distinction.
-    // It may have been forwarded by a different scavanger worker, so the access
+    // It may have been forwarded by a different scavenger worker, so the access
     // could have a data race. Rather than checking the CID of the underlying
     // typed data, which requires dereferencing the copied/promoted header, we
     // compare the view's internal pointer to what it should be if the
@@ -1860,7 +1860,7 @@ void Scavenger::ReverseScavenge(SemiSpace** from) {
   // Release any remaining part of the promotion worklist that wasn't completed.
   promotion_stack_.Reset();
 
-  // Release any remaining part of the rememebred set that wasn't completed.
+  // Release any remaining part of the remembered set that wasn't completed.
   StoreBuffer* store_buffer = heap_->isolate_group()->store_buffer();
   StoreBufferBlock* pending = blocks_;
   while (pending != nullptr) {

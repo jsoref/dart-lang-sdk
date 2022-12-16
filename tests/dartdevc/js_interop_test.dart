@@ -82,7 +82,7 @@ void main() {
   final Function? localNullableLegacy = () => 'hello';
   final String Function()? localNullable = () => 'hello';
 
-  // Assigment to JS static field.
+  // Assignment to JS static field.
   Expect.throws(() {
     _jsStaticVariable = () => 'hello';
   });
@@ -293,7 +293,7 @@ void main() {
   // Stored Function typed getter
   method = someClass.jsFunctionFieldGetter;
   // We lose safety after calling a getter that returns a function, which takes
-  // a function as an argument. Since this can be modeled with a method, isntead
+  // a function as an argument. Since this can be modeled with a method, instead
   // of a getter returning a function, we don't expect this is a pattern likely
   // to show up in real code.
   //Expect.throws(() {

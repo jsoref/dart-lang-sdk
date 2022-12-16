@@ -1014,7 +1014,7 @@ class DumpInfoAnnotator {
           : "${function.enclosingClass.name}.${function.name}";
     }
 
-    // Multiple kernel members members can sometimes map to a single JElement.
+    // Multiple kernel members can sometimes map to a single JElement.
     // [isSetter] and [isGetter] are required for disambiguating these cases.
     final kFunctionInfos = kernelInfo.state.info.functions
         .where((i) =>
@@ -1159,7 +1159,7 @@ class DumpInfoTask extends CompilerTask
   /// [registerEntityAst] is called.
   final Map<jsAst.Node, CodeSpan> _nodeData = <jsAst.Node, CodeSpan>{};
 
-  // A mapping from Dart Entities to Javascript AST Nodes.
+  // A mapping from Dart Entities to JavaScript AST Nodes.
   final Map<Entity, List<jsAst.Node>> _entityToNodes =
       <Entity, List<jsAst.Node>>{};
   final Map<ConstantValue, jsAst.Node> _constantToNode =

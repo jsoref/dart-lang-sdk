@@ -633,7 +633,7 @@ void StubCodeCompiler::GenerateRangeError(Assembler* assembler,
       __ j(BELOW, &length);
 #endif
       {
-        // Allocate a mint, reload the two registers and popualte the mint.
+        // Allocate a mint, reload the two registers and populate the mint.
         __ PushImmediate(Immediate(0));
         __ CallRuntime(kAllocateMintRuntimeEntry, /*argument_count=*/0);
         __ PopRegister(RangeErrorABI::kIndexReg);
@@ -1564,7 +1564,7 @@ void StubCodeCompiler::GenerateInvokeDartCodeStub(Assembler* assembler) {
 // Input:
 //   R10: number of context variables.
 // Output:
-//   RAX: new, uinitialised allocated Context object.
+//   RAX: new, uninitialised allocated Context object.
 // Clobbered:
 //   R13
 static void GenerateAllocateContextSpaceStub(Assembler* assembler,
@@ -3180,7 +3180,7 @@ void StubCodeCompiler::GenerateJumpToFrameStub(Assembler* assembler) {
   Label exit_through_non_ffi;
   // Check if we exited generated from FFI. If so do transition - this is needed
   // because normally runtime calls transition back to generated via destructor
-  // of TransititionGeneratedToVM/Native that is part of runtime boilerplate
+  // of TransitionGeneratedToVM/Native that is part of runtime boilerplate
   // code (see DEFINE_RUNTIME_ENTRY_IMPL in runtime_entry.h). Ffi calls don't
   // have this boilerplate, don't have this stack resource, have to transition
   // explicitly.

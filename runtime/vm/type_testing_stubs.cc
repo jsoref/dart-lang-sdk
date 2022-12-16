@@ -1334,9 +1334,9 @@ void RegisterTypeArgumentsUse(const Function& function,
       // This is an approximation: If we only know the type, but not the cid, we
       // might have a this-dispatch where we know it's either this class or any
       // subclass.
-      // We try to strengthen this assumption furher down by checking the offset
+      // We try to strengthen this assumption fuhrer down by checking the offset
       // of the type argument vector, but generally speaking this could be a
-      // false-postive, which is still ok!
+      // false-positive, which is still ok!
       const AbstractType& type = *instance->Type()->ToAbstractType();
       if (type.IsType()) {
         const Class& type_class = Class::Handle(type.type_class());
@@ -1518,7 +1518,7 @@ void TypeUsageInfo::UseTypeArgumentsInInstanceCreation(
     // of type arguments the class expects.
     ASSERT(ta.IsNull() || klass.NumTypeArguments() <= ta.Length());
 
-    // If this is a non-instantiated [TypeArguments] object, then it referes to
+    // If this is a non-instantiated [TypeArguments] object, then it refers to
     // type parameters.  We need to ensure the type parameters in [ta] only
     // refer to type parameters in the class.
     if (!ta.IsNull() && !ta.IsInstantiated() &&
@@ -1570,8 +1570,8 @@ void TypeUsageInfo::PropagateTypeArguments(ClassTable* class_table,
 
   TypeArgumentInstantiator instantiator(zone_);
 
-  const intptr_t kPropgationRounds = 2;
-  for (intptr_t round = 0; round < kPropgationRounds; ++round) {
+  const intptr_t kPropagationRounds = 2;
+  for (intptr_t round = 0; round < kPropagationRounds; ++round) {
     for (intptr_t cid = 0; cid < cid_count; ++cid) {
       if (!class_table->IsValidIndex(cid) ||
           !class_table->HasValidClassAt(cid)) {

@@ -933,8 +933,8 @@ class Namer extends ModularNamer {
         name = 'lib_$name';
       }
     }
-    // Names constructed based on a libary name will be further disambiguated.
-    // However, as names from the same libary should have the same library
+    // Names constructed based on a library name will be further disambiguated.
+    // However, as names from the same library should have the same library
     // name part, we disambiguate the library name here.
     String disambiguated = name;
     for (int c = 0; libraryLongNames.containsValue(disambiguated); c++) {
@@ -2356,7 +2356,7 @@ const Set<String> reservedCapitalizedGlobalSymbols = {
 
   // Window methods (https://developer.mozilla.org/en/DOM/window)
   "GeckoActiveXObject", "QueryInterface", "XPCNativeWrapper",
-  "XPCSafeJSOjbectWrapper",
+  "XPCSafeJSObjectWrapper",
 
   // Common browser-defined identifiers not defined in ECMAScript
   "Debug", "Enumerator", "Global", "Image",

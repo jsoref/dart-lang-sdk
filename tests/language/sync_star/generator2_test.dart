@@ -8,7 +8,7 @@ import "package:expect/expect.dart";
 import "dart:async";
 
 var sync = "topLevelSync";
-var async = "topLevelAync";
+var async = "topLevelASync";
 var await = "topLevelAwait";
 var yield = "topLevelYield";
 

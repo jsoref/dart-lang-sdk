@@ -375,7 +375,7 @@ bool HierarchyInfo::CanUseGenericSubtypeRangeCheckFor(
       TypeArguments::Handle(zone, Type::Cast(type).arguments());
   ASSERT(ta.Length() == num_type_arguments);
 
-  // The last [num_type_pararameters] entries in the [TypeArguments] vector [ta]
+  // The last [num_type_parameters] entries in the [TypeArguments] vector [ta]
   // are the values we have to check against.  Ensure we can handle all of them
   // via [CidRange]-based checks or that it is a type parameter.
   AbstractType& type_arg = AbstractType::Handle(zone);
@@ -2558,7 +2558,7 @@ Definition* Definition::Canonicalize(FlowGraph* flow_graph) {
 }
 
 Definition* RedefinitionInstr::Canonicalize(FlowGraph* flow_graph) {
-  // Must not remove Redifinitions without uses until LICM, even though
+  // Must not remove Redefinitions without uses until LICM, even though
   // Redefinition might not have any uses itself it can still be dominating
   // uses of the value it redefines and must serve as a barrier for those
   // uses. RenameUsesDominatedByRedefinitions would normalize the graph and
@@ -3282,7 +3282,7 @@ Definition* IntConverterInstr::Canonicalize(FlowGraph* flow_graph) {
 
   IntConverterInstr* box_defn = value()->definition()->AsIntConverter();
   if ((box_defn != NULL) && (box_defn->representation() == from())) {
-    // If the first convertion can erase bits (or deoptimize) we can't
+    // If the first conversion can erase bits (or deoptimize) we can't
     // canonicalize it away.
     auto src_defn = box_defn->value()->definition();
     if ((box_defn->from() == kUnboxedInt64) &&
@@ -3316,7 +3316,7 @@ Definition* IntConverterInstr::Canonicalize(FlowGraph* flow_graph) {
   UnboxInt64Instr* unbox_defn = value()->definition()->AsUnboxInt64();
   if (unbox_defn != NULL && (from() == kUnboxedInt64) &&
       (to() == kUnboxedInt32) && unbox_defn->HasOnlyInputUse(value())) {
-    // TODO(vegorov): there is a duplication of code between UnboxedIntCoverter
+    // TODO(vegorov): there is a duplication of code between UnboxedIntConverter
     // and code path that unboxes Mint into Int32. We should just schedule
     // these instructions close to each other instead of fusing them.
     Definition* replacement =
@@ -3936,7 +3936,7 @@ const CallTargets* CallTargets::CreateAndExpand(Zone* zone,
     // into a suffix that consists purely of abstract classes to
     // shorten the range.
     // However such spreading is beneficial when it allows to
-    // merge to consequtive ranges.
+    // merge to consecutive ranges.
     intptr_t cid_end_including_abstract = target_info->cid_end;
     for (int i = target_info->cid_end + 1; i < upper_limit_cid; i++) {
       bool class_is_abstract = false;
@@ -6301,7 +6301,7 @@ Definition* PhiInstr::Canonicalize(FlowGraph* flow_graph) {
     // If we are replacing a Phi which has redefinitions as all of its inputs
     // then to maintain the redefinition chain we are going to insert a
     // redefinition. If any input is *not* a redefinition that means that
-    // whatever properties were infered for a Phi also hold on a path
+    // whatever properties were inferred for a Phi also hold on a path
     // that does not pass through any redefinitions so there is no need
     // to redefine this value.
     auto zone = flow_graph->zone();
@@ -6838,7 +6838,7 @@ void FfiCallInstr::EmitParamMoves(FlowGraphCompiler* compiler,
       ConstantTemporaryAllocator temp_alloc(temp0);
       if (origin.IsConstant()) {
         // Can't occur because we currently don't inline FFI trampolines (see
-        // http://dartbug.com/45055), which means all incomming arguments
+        // http://dartbug.com/45055), which means all incoming arguments
         // originate from parameters and thus are non-constant.
         UNREACHABLE();
       }
@@ -6905,7 +6905,7 @@ void FfiCallInstr::EmitParamMoves(FlowGraphCompiler* compiler,
                    compiler::FieldAddress(
                        temp0, compiler::target::PointerBase::data_offset()));
 
-      // Copy chuncks.
+      // Copy chunks.
       const intptr_t sp_offset =
           marshaller_.PassByPointerStackOffset(arg_index);
       // Struct size is rounded up to a multiple of target::kWordSize.
