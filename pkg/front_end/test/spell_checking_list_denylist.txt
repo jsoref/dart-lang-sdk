@@ -63,7 +63,7 @@ outtermost
 phisical
 plaform
 poluted
-preceeded
+preceded
 previosly
 priotity
 proram
