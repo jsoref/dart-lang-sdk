@@ -443,7 +443,7 @@ abstract class DartDebugAdapter<TL extends LaunchRequestArguments,
   /// Capabilities of the DDS instance available in the connected VM Service.
   ///
   /// If the VM Service is not yet connected, does not have a DDS instance, or
-  /// the version has not been been fetched, all capabilities will be false.
+  /// the version has not been fetched, all capabilities will be false.
   _DdsCapabilities _ddsCapabilities = _DdsCapabilities.empty;
 
   /// The ID of the custom VM Service stream that emits events intended for
