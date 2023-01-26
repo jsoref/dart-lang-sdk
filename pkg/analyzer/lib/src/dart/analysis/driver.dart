@@ -59,7 +59,7 @@ import 'package:analyzer/src/utilities/uri_cache.dart';
 /// analyzed files to the most recent [AnalysisResult] delivered to [results]
 /// for each file. Let the "current file state" represent a map from file path
 /// to the file contents most recently read from that file, or fetched from the
-/// content cache (considering all possible possible file paths, regardless of
+/// content cache (considering all possible file paths, regardless of
 /// whether they're in the set of explicitly analyzed files). Let the
 /// "analysis state" be either "analyzing" or "idle".
 ///
