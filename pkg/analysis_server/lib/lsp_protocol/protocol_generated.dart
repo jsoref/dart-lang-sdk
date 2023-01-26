@@ -89,11 +89,11 @@ typedef GlobPattern = Either2<LspPattern, RelativePattern>;
 /// Inline value information can be provided by different means:
 /// - directly as a text value (class InlineValueText).
 /// - as a name to use for a variable lookup (class InlineValueVariableLookup)
-/// - as an evaluatable expression (class InlineValueEvaluatableExpression) The
+/// - as an evaluable expression (class InlineValueEvaluableExpression) The
 /// InlineValue types combines all inline value types into one type.
 ///
 /// @since 3.17.0
-typedef InlineValue = Either3<InlineValueEvaluatableExpression, InlineValueText,
+typedef InlineValue = Either3<InlineValueEvaluableExpression, InlineValueText,
     InlineValueVariableLookup>;
 
 /// LSP arrays.
@@ -17028,22 +17028,22 @@ class InlineValueContext implements ToJsonable {
 /// optional expression can be used to override the extracted expression.
 ///
 /// @since 3.17.0
-class InlineValueEvaluatableExpression implements ToJsonable {
+class InlineValueEvaluableExpression implements ToJsonable {
   static const jsonHandler = LspJsonHandler(
-    InlineValueEvaluatableExpression.canParse,
-    InlineValueEvaluatableExpression.fromJson,
+    InlineValueEvaluableExpression.canParse,
+    InlineValueEvaluableExpression.fromJson,
   );
 
-  InlineValueEvaluatableExpression({
+  InlineValueEvaluableExpression({
     this.expression,
     required this.range,
   });
-  static InlineValueEvaluatableExpression fromJson(Map<String, Object?> json) {
+  static InlineValueEvaluableExpression fromJson(Map<String, Object?> json) {
     final expressionJson = json['expression'];
     final expression = expressionJson as String?;
     final rangeJson = json['range'];
     final range = Range.fromJson(rangeJson as Map<String, Object?>);
-    return InlineValueEvaluatableExpression(
+    return InlineValueEvaluableExpression(
       expression: expression,
       range: range,
     );
@@ -17053,7 +17053,7 @@ class InlineValueEvaluatableExpression implements ToJsonable {
   final String? expression;
 
   /// The document range for which the inline value applies. The range is used
-  /// to extract the evaluatable expression from the underlying document.
+  /// to extract the evaluable expression from the underlying document.
   final Range range;
 
   @override
@@ -17075,15 +17075,15 @@ class InlineValueEvaluatableExpression implements ToJsonable {
       return _canParseRange(obj, reporter, 'range',
           allowsUndefined: false, allowsNull: false);
     } else {
-      reporter.reportError('must be of type InlineValueEvaluatableExpression');
+      reporter.reportError('must be of type InlineValueEvaluableExpression');
       return false;
     }
   }
 
   @override
   bool operator ==(Object other) {
-    return other is InlineValueEvaluatableExpression &&
-        other.runtimeType == InlineValueEvaluatableExpression &&
+    return other is InlineValueEvaluableExpression &&
+        other.runtimeType == InlineValueEvaluableExpression &&
         expression == other.expression &&
         range == other.range;
   }
