@@ -748,7 +748,6 @@ deciding
 decimal
 decision
 declarable
-declarated
 declaration
 declaration's
 declarations
