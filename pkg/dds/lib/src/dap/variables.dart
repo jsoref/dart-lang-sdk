@@ -16,7 +16,7 @@ class VariableData {
 
 /// Formatting preferences for a variable.
 class VariableFormat {
-  /// Whether to supress quotes around [String]s.
+  /// Whether to suppress quotes around [String]s.
   final bool noQuotes;
 
   /// Whether to render integers as hex.
