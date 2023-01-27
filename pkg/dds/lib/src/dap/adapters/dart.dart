@@ -853,9 +853,9 @@ abstract class DartDebugAdapter<TL extends LaunchRequestArguments,
         // the client knows that these have become stale (because the user
         // changed some config) so we have to bounce it through the server.
         final areas = args?.args['areas'] as List<Object?>?;
-        final stringArears = areas?.whereType<String>().toList();
+        final stringAreas = areas?.whereType<String>().toList();
         // Trigger the invalidation.
-        sendEvent(InvalidatedEventBody(areas: stringArears));
+        sendEvent(InvalidatedEventBody(areas: stringAreas));
         // Respond to the incoming request.
         sendResponse(_noResult);
         break;
